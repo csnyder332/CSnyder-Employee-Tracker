@@ -1,3 +1,4 @@
+Remove the node_modules folder from the git repository git rm -r –cached node_modules.
 .env
 package-lock.json
 node_modules
