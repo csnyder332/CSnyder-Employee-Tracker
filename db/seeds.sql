@@ -9,7 +9,7 @@ VALUE ('IT');
 INSERT INTO department (name) 
 VALUE ('Executive');
 
-INSERT INTO roles (title, salary, department_id) 
+INSERT INTO role (title, salary, department_id) 
 VALUE ('SalesManager', 75000.00, 1);
 INSERT INTO roles (title, salary, department_id) 
 VALUE ('SalesTeam', 50000.00, 1);
