@@ -2,6 +2,7 @@
   
   ## Badges
   ![badge](https://img.shields.io/badge/license-Github,NPM-yellow)<br />
+  
  
   ## Description
   A command line employee tracking database using SQL and inquirer.
