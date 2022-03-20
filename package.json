@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": " node index.js",
-    "seed": "node seeds.sql"
+    "seed": "node seeds.sql",
+    "eslint.nodePath": "myCustomNodePath"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,12 @@
     "bcrypt": "^5.0.1",
     "console.table": "^0.10.0",
     "dotenv": "^16.0.0",
+    "eslint": "^8.11.0",
     "express": "^4.17.3",
     "fs": "^0.0.1-security",
     "inquirer": "^8.2.1",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
-  },
-  "devDependencies": {}
+  }
 }
