@@ -45,7 +45,7 @@
   ![NPM](https://img.shields.io/npm/l/inquirer)
   
   ## Links
-  Link to video walkthrough: https://drive.google.com/file/d/1zfDCCovn4ZHwUGRcKPyQJl8h6LeKs1uy/view
+  Link to video walkthrough: https://drive.google.com/file/d/1zfDCCovn4ZHwUGRcKPyQJl8h6LeKs1uy/view  
   Link to repositiory: https://github.com/csnyder332/CSnyder-Employee-Tracker
 
 
