@@ -22,7 +22,8 @@
   Install Node, MySQL, Inquirer, and Console.Table
 
   ## Usage
-  
+  ![image](https://user-images.githubusercontent.com/95385092/159195310-18f2a90e-0977-4a04-9742-89f0f8adb7ed.png)
+
 
   ## Contribute
   [Contributor Covenant](https://www.contributor-covenant.org/)
@@ -45,6 +46,7 @@
   
   ## Links
   Link to video walkthrough: https://drive.google.com/file/d/1zfDCCovn4ZHwUGRcKPyQJl8h6LeKs1uy/view
+  Link to repositiory: https://github.com/csnyder332/CSnyder-Employee-Tracker
 
 
 
