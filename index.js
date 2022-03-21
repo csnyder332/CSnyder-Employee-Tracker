@@ -4,14 +4,14 @@ const table = require("console.table");
 const db = require("./config/connection");
 const validate = require('./validate');
 const { ORDER } = require("mysql/lib/PoolSelector");
-
+// db connection
 const connection = db;
 
 connection.connect((error) => {
   if (error) throw error;
       firstPrompt();
     });
-
+// initialize inquirer
 function firstPrompt() {
   inquirer
     .prompt({
@@ -78,6 +78,7 @@ function firstPrompt() {
       }
     });
 }
+// function to view departments
 function viewAllDepartments() {
     console.log('All departments\n');
     var query = `SELECT DISTINCT d.id, d.name FROM department d`
@@ -87,7 +88,7 @@ function viewAllDepartments() {
       firstPrompt();
     });
   }
-
+// function to view roles
   function viewAllroles() {
     console.log('All roles\n');
     var query = `SELECT roles.id, roles.title, department.name AS department, roles.salary AS salary
@@ -98,7 +99,7 @@ function viewAllDepartments() {
       firstPrompt();
     });
   }
-
+// function to view employees
 function viewAllemployees() {
     console.log('All employees\n');
     var query = `SELECT employee.id, employee.first_name, employee.last_name, 
@@ -112,7 +113,7 @@ function viewAllemployees() {
       firstPrompt();
     });
   }
-
+// function to add departments
   const addADepartment = () => {
     inquirer
       .prompt([
@@ -132,7 +133,7 @@ function viewAllemployees() {
         });
       });
 };
-
+// function to add roles
 const addARole = () => {
     const sql = 'SELECT * FROM department'
   connection.query(sql, (error, response) => {
@@ -193,7 +194,7 @@ const addARole = () => {
       };
     });
   };
-
+// function to add employees
   const addAnEmployee = () => {
     inquirer.prompt([
       {
@@ -268,7 +269,7 @@ const addARole = () => {
        });
     });
   };
-
+// function to update a role
   const updateAnEmployeerole = () => {
     let sql =       `SELECT employee.id, employee.first_name, employee.last_name, roles.id AS "role_id"
                     FROM employee, roles, department WHERE department.id = roles.department_id AND roles.id = employee.role_id`;
@@ -330,7 +331,7 @@ const addARole = () => {
       });
     });
   };
-
+// function to view employees by department
   const viewEmployeesByDepartment = () => {
     const sql =     `SELECT employee.first_name, 
                     employee.last_name, 
@@ -360,6 +361,7 @@ const addARole = () => {
         firstPrompt();
       });
   };
+  // function to delete employees
   const deleteEmployees = () => {
     let sql =     `SELECT employee.id, employee.first_name, employee.last_name FROM employee`;
 
@@ -398,7 +400,7 @@ const addARole = () => {
         });
     });
   };
-
+// function to delete roles
   const deleteRoles = () => {
     let sql = `SELECT roles.id, roles.title FROM roles`;
 
@@ -434,6 +436,7 @@ const addARole = () => {
         });
     });
   };
+  // function to delete departments
   const deleteDepartments = () => {
     let sql =   `SELECT department.id, department.name FROM department`;
     connection.query(sql, (error, response) => {
@@ -468,6 +471,7 @@ const addARole = () => {
         });
     });
 };
+// function to view budgets
 const viewDepartmentBudget = () => {
     console.log('Budget By Department:');
     const sql =     `SELECT department_id AS id, 

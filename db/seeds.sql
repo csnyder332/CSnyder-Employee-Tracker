@@ -1,3 +1,5 @@
+
+-- data to populate tables
 USE employees;
 
 INSERT INTO department (name) 
